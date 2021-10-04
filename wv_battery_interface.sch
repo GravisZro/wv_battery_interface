@@ -1,0 +1,591 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 9
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x03 J1
+U 1 1 616238A4
+P 7250 2000
+F 0 "J1" H 7168 2317 50  0000 C CNN
+F 1 "Conn_01x03" H 7168 2226 50  0000 C CNN
+F 2 "Connector_Wire:SolderWire-2sqmm_1x03_P7.8mm_D2mm_OD3.9mm" H 7250 2000 50  0001 C CNN
+F 3 "~" H 7250 2000 50  0001 C CNN
+	1    7250 2000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J2
+U 1 1 61623D8A
+P 7250 2550
+F 0 "J2" H 7168 2867 50  0000 C CNN
+F 1 "Conn_01x03" H 7168 2776 50  0000 C CNN
+F 2 "Connector_Wire:SolderWire-2sqmm_1x03_P7.8mm_D2mm_OD3.9mm" H 7250 2550 50  0001 C CNN
+F 3 "~" H 7250 2550 50  0001 C CNN
+	1    7250 2550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 1900 7600 1800
+Wire Wire Line
+	7750 2000 7750 1800
+Wire Wire Line
+	7450 2450 7600 2450
+Wire Wire Line
+	7600 2450 7600 2350
+Wire Wire Line
+	7450 2550 7750 2550
+Wire Wire Line
+	7750 2550 7750 2350
+$Comp
+L power_symbols:+BATT1 #PWR0101
+U 1 1 61636C34
+P 7750 1800
+F 0 "#PWR0101" H 7750 1650 50  0001 C CNN
+F 1 "+BATT1" H 7765 1973 50  0000 C CNN
+F 2 "" H 7750 1800 50  0001 C CNN
+F 3 "" H 7750 1800 50  0001 C CNN
+	1    7750 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 2000 7750 2000
+Wire Wire Line
+	7450 1900 7600 1900
+$Comp
+L power_symbols:+BATT1 #PWR0106
+U 1 1 6163CAEF
+P 1900 1300
+F 0 "#PWR0106" H 1900 1150 50  0001 C CNN
+F 1 "+BATT1" H 1915 1473 50  0000 C CNN
+F 2 "" H 1900 1300 50  0001 C CNN
+F 3 "" H 1900 1300 50  0001 C CNN
+	1    1900 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power_symbols:+BATT1 #PWR0107
+U 1 1 6168E4A3
+P 5900 3150
+F 0 "#PWR0107" H 5900 3000 50  0001 C CNN
+F 1 "+BATT1" H 5915 3323 50  0000 C CNN
+F 2 "" H 5900 3150 50  0001 C CNN
+F 3 "" H 5900 3150 50  0001 C CNN
+	1    5900 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power_symbols:+BATT2 #PWR0103
+U 1 1 61637B76
+P 7750 2350
+F 0 "#PWR0103" H 7750 2200 50  0001 C CNN
+F 1 "+BATT2" H 7765 2523 50  0000 C CNN
+F 2 "" H 7750 2350 50  0001 C CNN
+F 3 "" H 7750 2350 50  0001 C CNN
+	1    7750 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power_symbols:+BATT2 #PWR0109
+U 1 1 6168FC33
+P 5900 4050
+F 0 "#PWR0109" H 5900 3900 50  0001 C CNN
+F 1 "+BATT2" H 5915 4223 50  0000 C CNN
+F 2 "" H 5900 4050 50  0001 C CNN
+F 3 "" H 5900 4050 50  0001 C CNN
+	1    5900 4050
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 6150 3100 1100 500 
+U 6173FDB3
+F0 "Soft Latch Switch 1" 50
+F1 "soft_latch_switch.sch" 50
+F2 "Vin" U L 6150 3200 50 
+F3 "GND" U L 6150 3300 50 
+F4 "Vout" U R 7250 3200 50 
+F5 "Enable" U R 7250 3500 50 
+F6 "Switch-to-GND" U L 6150 3500 50 
+$EndSheet
+$Sheet
+S 6150 4000 1100 500 
+U 61742C5F
+F0 "Soft Latch Switch 2" 50
+F1 "soft_latch_switch.sch" 50
+F2 "Vin" U L 6150 4100 50 
+F3 "GND" U L 6150 4200 50 
+F4 "Vout" U R 7250 4100 50 
+F5 "Enable" U R 7250 4400 50 
+F6 "Switch-to-GND" U L 6150 4400 50 
+$EndSheet
+Wire Wire Line
+	6150 4100 5900 4100
+Wire Wire Line
+	5900 4100 5900 4050
+Wire Wire Line
+	6150 4200 5900 4200
+Wire Wire Line
+	6150 3200 5900 3200
+Wire Wire Line
+	5900 3200 5900 3150
+$Comp
+L MCU_Microchip_ATtiny:ATtiny204-SS U1
+U 1 1 617883CC
+P 10050 3550
+F 0 "U1" H 10450 4200 50  0000 C CNN
+F 1 "ATtiny204-SS" H 10050 3600 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 10050 3550 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/50002687A.pdf" H 10050 3550 50  0001 C CNN
+	1    10050 3550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 6179206F
+P 5450 4800
+F 0 "#PWR0114" H 5450 4550 50  0001 C CNN
+F 1 "GND" H 5455 4627 50  0000 C CNN
+F 2 "" H 5450 4800 50  0001 C CNN
+F 3 "" H 5450 4800 50  0001 C CNN
+	1    5450 4800
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 1500 5750 750  350 
+U 6181BA12
+F0 "BLDC ESC" 50
+F1 "powered_board.sch" 50
+F2 "1wire" U L 1500 5850 50 
+F3 "10V-20V" U L 1500 6000 50 
+F4 "GND" U R 2250 6000 50 
+F5 "V+" U R 2250 5850 50 
+$EndSheet
+$Sheet
+S 1500 6450 750  350 
+U 61821DD3
+F0 "Propulsion ESC" 50
+F1 "powered_board.sch" 50
+F2 "1wire" U L 1500 6550 50 
+F3 "10V-20V" U L 1500 6700 50 
+F4 "GND" U R 2250 6700 50 
+F5 "V+" U R 2250 6550 50 
+$EndSheet
+Wire Wire Line
+	1400 5850 1500 5850
+Wire Wire Line
+	9450 3250 9300 3250
+Wire Wire Line
+	9300 3250 9300 3350
+Wire Wire Line
+	9300 3350 9450 3350
+Wire Wire Line
+	9300 3250 8800 3250
+Connection ~ 9300 3250
+$Sheet
+S 1650 4450 650  500 
+U 61845305
+F0 "14V Power System" 50
+F1 "14V_switcher.sch" 50
+F2 "Enable" U L 1650 4550 50 
+F3 "Vin" U L 1650 4650 50 
+F4 "Gnd" U L 1650 4850 50 
+F5 "Vout" U L 1650 4750 50 
+$EndSheet
+$Comp
+L power:GND #PWR0120
+U 1 1 6184774C
+P 1500 4950
+F 0 "#PWR0120" H 1500 4700 50  0001 C CNN
+F 1 "GND" H 1505 4777 50  0000 C CNN
+F 2 "" H 1500 4950 50  0001 C CNN
+F 3 "" H 1500 4950 50  0001 C CNN
+	1    1500 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 4850 1500 4850
+Wire Wire Line
+	1500 4850 1500 4950
+Wire Wire Line
+	1650 4550 1450 4550
+Wire Wire Line
+	1450 4550 1450 4450
+Wire Wire Line
+	1650 4650 1450 4650
+Wire Wire Line
+	1450 4650 1450 4550
+Connection ~ 1450 4550
+Wire Wire Line
+	1650 4750 1200 4750
+Wire Wire Line
+	1200 4450 1200 4750
+Text GLabel 8800 3250 0    50   UnSpc ~ 0
+1wire_bus
+Text GLabel 1250 5850 0    50   UnSpc ~ 0
+1wire_bus
+Wire Wire Line
+	1400 5850 1250 5850
+Connection ~ 1400 5850
+Text GLabel 5450 4500 2    50   UnSpc ~ 0
+1wire_bus
+Text GLabel 1200 4450 1    50   UnSpc ~ 0
+14V
+Text GLabel 1250 6000 0    50   UnSpc ~ 0
+14V
+Wire Wire Line
+	1500 6550 1400 6550
+Wire Wire Line
+	1500 6700 1300 6700
+Wire Wire Line
+	1300 6700 1300 6000
+Connection ~ 1300 6000
+Wire Wire Line
+	1300 6000 1250 6000
+NoConn ~ 1400 6000
+Wire Wire Line
+	2250 6550 2400 6550
+Wire Wire Line
+	2400 5850 2250 5850
+Wire Wire Line
+	2500 6000 2500 6700
+Wire Wire Line
+	2500 6700 2250 6700
+NoConn ~ 2400 6000
+$Comp
+L power:GND #PWR0108
+U 1 1 618A8456
+P 10050 4250
+F 0 "#PWR0108" H 10050 4000 50  0001 C CNN
+F 1 "GND" H 10055 4077 50  0000 C CNN
+F 2 "" H 10050 4250 50  0001 C CNN
+F 3 "" H 10050 4250 50  0001 C CNN
+	1    10050 4250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 6850 2500 6700
+Connection ~ 2500 6700
+Text GLabel 7450 3200 2    50   UnSpc ~ 0
+BatteryPower
+Text GLabel 7450 4100 2    50   UnSpc ~ 0
+BatteryPower
+Wire Wire Line
+	2400 5850 2600 5850
+Connection ~ 2400 5850
+$Comp
+L power:GND #PWR0110
+U 1 1 618C0EBB
+P 2500 6850
+F 0 "#PWR0110" H 2500 6600 50  0001 C CNN
+F 1 "GND" H 2505 6677 50  0000 C CNN
+F 2 "" H 2500 6850 50  0001 C CNN
+F 3 "" H 2500 6850 50  0001 C CNN
+	1    2500 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 618C3CE3
+P 5900 4250
+F 0 "#PWR0111" H 5900 4000 50  0001 C CNN
+F 1 "GND" H 5905 4077 50  0000 C CNN
+F 2 "" H 5900 4250 50  0001 C CNN
+F 3 "" H 5900 4250 50  0001 C CNN
+	1    5900 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 4200 5900 4250
+$Comp
+L power:GND #PWR0112
+U 1 1 618C781F
+P 5900 3350
+F 0 "#PWR0112" H 5900 3100 50  0001 C CNN
+F 1 "GND" H 5905 3177 50  0000 C CNN
+F 2 "" H 5900 3350 50  0001 C CNN
+F 3 "" H 5900 3350 50  0001 C CNN
+	1    5900 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 3300 5900 3300
+Wire Wire Line
+	5900 3300 5900 3350
+Text GLabel 1900 1500 0    50   UnSpc ~ 0
+RelayPower
+Text GLabel 1900 2700 0    50   UnSpc ~ 0
+RelayPower
+Text GLabel 2600 5850 2    50   UnSpc ~ 0
+RelayPower
+$Comp
+L Connector_Generic:Conn_01x04 J3
+U 1 1 6178B2FF
+P 5150 4600
+F 0 "J3" H 5068 4175 50  0000 C CNN
+F 1 "Conn_01x04" H 5068 4266 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 5150 4600 50  0001 C CNN
+F 3 "~" H 5150 4600 50  0001 C CNN
+	1    5150 4600
+	-1   0    0    1   
+$EndComp
+Text GLabel 5450 4600 2    50   UnSpc ~ 0
+14V
+Wire Wire Line
+	5350 4700 5450 4700
+Wire Wire Line
+	5350 4600 5450 4600
+Wire Wire Line
+	5450 4500 5350 4500
+Wire Wire Line
+	5450 4700 5450 4800
+$Comp
+L power_symbols:+BATT2 #PWR0105
+U 1 1 6163BC2C
+P 1900 2550
+F 0 "#PWR0105" H 1900 2400 50  0001 C CNN
+F 1 "+BATT2" H 1915 2723 50  0000 C CNN
+F 2 "" H 1900 2550 50  0001 C CNN
+F 3 "" H 1900 2550 50  0001 C CNN
+	1    1900 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 3500 5700 3500
+Wire Wire Line
+	5700 3500 5700 4400
+Wire Wire Line
+	5700 4400 6150 4400
+Wire Wire Line
+	5350 4400 5700 4400
+Connection ~ 5700 4400
+Wire Wire Line
+	2400 5850 2400 6550
+Wire Wire Line
+	2250 6000 2500 6000
+Wire Wire Line
+	1300 6000 1500 6000
+Wire Wire Line
+	1400 5850 1400 6550
+$Comp
+L power:GND #PWR0102
+U 1 1 6192AFDF
+P 7600 1800
+F 0 "#PWR0102" H 7600 1550 50  0001 C CNN
+F 1 "GND" H 7605 1627 50  0000 C CNN
+F 2 "" H 7600 1800 50  0001 C CNN
+F 3 "" H 7600 1800 50  0001 C CNN
+	1    7600 1800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 6192BB15
+P 7600 2350
+F 0 "#PWR0104" H 7600 2100 50  0001 C CNN
+F 1 "GND" H 7605 2177 50  0000 C CNN
+F 2 "" H 7600 2350 50  0001 C CNN
+F 3 "" H 7600 2350 50  0001 C CNN
+	1    7600 2350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7450 2100 9150 2100
+Wire Wire Line
+	8200 2650 7450 2650
+$Sheet
+S 2100 1250 1050 650 
+U 619492C3
+F0 "Relay 1" 50
+F1 "driven_relay.sch" 50
+F2 "RelayIn" U L 2100 1350 50 
+F3 "RelayOut" U L 2100 1500 50 
+F4 "VCC" U R 3150 1500 50 
+F5 "GND" U R 3150 1650 50 
+F6 "Enable" U R 3150 1350 50 
+$EndSheet
+Wire Wire Line
+	2100 1350 1900 1350
+Wire Wire Line
+	1900 1350 1900 1300
+Wire Wire Line
+	2100 1500 1900 1500
+Text GLabel 3350 1500 2    50   UnSpc ~ 0
+14V
+$Comp
+L power:GND #PWR0113
+U 1 1 6195C47C
+P 3350 1800
+F 0 "#PWR0113" H 3350 1550 50  0001 C CNN
+F 1 "GND" H 3355 1627 50  0000 C CNN
+F 2 "" H 3350 1800 50  0001 C CNN
+F 3 "" H 3350 1800 50  0001 C CNN
+	1    3350 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 1650 3350 1650
+Wire Wire Line
+	3350 1650 3350 1800
+Wire Wire Line
+	3150 1500 3350 1500
+$Sheet
+S 2100 2450 1050 650 
+U 619684B5
+F0 "Relay 2" 50
+F1 "driven_relay.sch" 50
+F2 "RelayIn" U L 2100 2550 50 
+F3 "RelayOut" U L 2100 2700 50 
+F4 "VCC" U R 3150 2700 50 
+F5 "GND" U R 3150 2850 50 
+F6 "Enable" U R 3150 2550 50 
+$EndSheet
+Wire Wire Line
+	2100 2550 1900 2550
+Wire Wire Line
+	2100 2700 1900 2700
+Text GLabel 3350 2700 2    50   UnSpc ~ 0
+14V
+$Comp
+L power:GND #PWR0115
+U 1 1 619684BE
+P 3350 3000
+F 0 "#PWR0115" H 3350 2750 50  0001 C CNN
+F 1 "GND" H 3355 2827 50  0000 C CNN
+F 2 "" H 3350 3000 50  0001 C CNN
+F 3 "" H 3350 3000 50  0001 C CNN
+	1    3350 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 2850 3350 2850
+Wire Wire Line
+	3350 2850 3350 3000
+Wire Wire Line
+	3150 2700 3350 2700
+Wire Wire Line
+	4850 5100 4850 1350
+Wire Wire Line
+	3150 1350 4850 1350
+Text GLabel 1450 4450 1    50   UnSpc ~ 0
+BatteryPower
+Wire Wire Line
+	4850 5100 9000 5100
+Wire Wire Line
+	10650 3250 10900 3250
+Wire Wire Line
+	3150 2550 4750 2550
+Wire Wire Line
+	4750 2550 4750 5200
+Wire Wire Line
+	4750 5200 10900 5200
+Wire Wire Line
+	10900 3250 10900 5200
+Wire Wire Line
+	9450 3450 9000 3450
+Wire Wire Line
+	9000 3450 9000 5100
+Wire Wire Line
+	10650 3350 10750 3350
+Wire Wire Line
+	9450 3650 7850 3650
+Wire Wire Line
+	7850 3650 7850 3500
+Wire Wire Line
+	9450 3550 9150 3550
+Wire Wire Line
+	9150 3550 9150 2100
+Wire Wire Line
+	9450 3750 8200 3750
+Wire Wire Line
+	8200 3750 8200 2650
+Wire Wire Line
+	9450 3850 8200 3850
+Wire Wire Line
+	8200 3850 8200 4400
+$Comp
+L power:+5V #PWR0118
+U 1 1 619F166A
+P 10050 2850
+F 0 "#PWR0118" H 10050 2700 50  0001 C CNN
+F 1 "+5V" H 10065 3023 50  0000 C CNN
+F 2 "" H 10050 2850 50  0001 C CNN
+F 3 "" H 10050 2850 50  0001 C CNN
+	1    10050 2850
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 5900 6950 550  200 
+U 6158E9D7
+F0 "5V regulator" 50
+F1 "5Vregulator.sch" 50
+F2 "Vin" U L 5900 7050 50 
+$EndSheet
+Text GLabel 5750 7050 0    50   UnSpc ~ 0
+14V
+Wire Wire Line
+	5900 7050 5750 7050
+$Comp
+L Connector_Generic:Conn_01x03 J11
+U 1 1 615C00F9
+P 9550 2100
+F 0 "J11" H 9468 2417 50  0000 C CNN
+F 1 "Conn_01x03" H 9468 2326 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 9550 2100 50  0001 C CNN
+F 3 "~" H 9550 2100 50  0001 C CNN
+	1    9550 2100
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0119
+U 1 1 615C0E88
+P 9550 1900
+F 0 "#PWR0119" H 9550 1750 50  0001 C CNN
+F 1 "+5V" H 9565 2073 50  0000 C CNN
+F 2 "" H 9550 1900 50  0001 C CNN
+F 3 "" H 9550 1900 50  0001 C CNN
+	1    9550 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0121
+U 1 1 615C1760
+P 9450 1900
+F 0 "#PWR0121" H 9450 1650 50  0001 C CNN
+F 1 "GND" H 9455 1727 50  0000 C CNN
+F 2 "" H 9450 1900 50  0001 C CNN
+F 3 "" H 9450 1900 50  0001 C CNN
+	1    9450 1900
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	9650 1900 9650 1800
+Wire Wire Line
+	9650 1800 9850 1800
+Wire Wire Line
+	9850 1800 9850 2600
+Wire Wire Line
+	9850 2600 9300 2600
+Wire Wire Line
+	9300 2600 9300 3150
+Wire Wire Line
+	9300 3150 9450 3150
+Wire Wire Line
+	7250 4100 7450 4100
+Wire Wire Line
+	7250 4400 8200 4400
+Wire Wire Line
+	7250 3200 7450 3200
+Wire Wire Line
+	7250 3500 7850 3500
+NoConn ~ 8200 3650
+$EndSCHEMATC

@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name relays)(type Legacy)(uri ${KIPRJMOD}/relays.lib)(options "")(descr ""))
+  (lib (name power_symbols)(type Legacy)(uri ${KIPRJMOD}/power_symbols.lib)(options "")(descr ""))
+  (lib (name ldos)(type Legacy)(uri ${KIPRJMOD}/ldos.lib)(options "")(descr ""))
+)
