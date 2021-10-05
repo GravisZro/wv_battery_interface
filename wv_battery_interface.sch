@@ -14,55 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector_Generic:Conn_01x03 J1
-U 1 1 616238A4
-P 7250 2000
-F 0 "J1" H 7168 2317 50  0000 C CNN
-F 1 "Conn_01x03" H 7168 2226 50  0000 C CNN
-F 2 "Connector_Wire:SolderWire-2sqmm_1x03_P7.8mm_D2mm_OD3.9mm" H 7250 2000 50  0001 C CNN
-F 3 "~" H 7250 2000 50  0001 C CNN
-	1    7250 2000
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x03 J2
-U 1 1 61623D8A
-P 7250 2550
-F 0 "J2" H 7168 2867 50  0000 C CNN
-F 1 "Conn_01x03" H 7168 2776 50  0000 C CNN
-F 2 "Connector_Wire:SolderWire-2sqmm_1x03_P7.8mm_D2mm_OD3.9mm" H 7250 2550 50  0001 C CNN
-F 3 "~" H 7250 2550 50  0001 C CNN
-	1    7250 2550
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	7600 1900 7600 1800
-Wire Wire Line
-	7750 2000 7750 1800
-Wire Wire Line
-	7450 2450 7600 2450
-Wire Wire Line
-	7600 2450 7600 2350
-Wire Wire Line
-	7450 2550 7750 2550
-Wire Wire Line
-	7750 2550 7750 2350
-$Comp
-L power_symbols:+BATT1 #PWR0101
-U 1 1 61636C34
-P 7750 1800
-F 0 "#PWR0101" H 7750 1650 50  0001 C CNN
-F 1 "+BATT1" H 7765 1973 50  0000 C CNN
-F 2 "" H 7750 1800 50  0001 C CNN
-F 3 "" H 7750 1800 50  0001 C CNN
-	1    7750 1800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7450 2000 7750 2000
-Wire Wire Line
-	7450 1900 7600 1900
-$Comp
 L power_symbols:+BATT1 #PWR0106
 U 1 1 6163CAEF
 P 1900 1300
@@ -76,23 +27,12 @@ $EndComp
 $Comp
 L power_symbols:+BATT1 #PWR0107
 U 1 1 6168E4A3
-P 5900 3150
-F 0 "#PWR0107" H 5900 3000 50  0001 C CNN
-F 1 "+BATT1" H 5915 3323 50  0000 C CNN
-F 2 "" H 5900 3150 50  0001 C CNN
-F 3 "" H 5900 3150 50  0001 C CNN
-	1    5900 3150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power_symbols:+BATT2 #PWR0103
-U 1 1 61637B76
-P 7750 2350
-F 0 "#PWR0103" H 7750 2200 50  0001 C CNN
-F 1 "+BATT2" H 7765 2523 50  0000 C CNN
-F 2 "" H 7750 2350 50  0001 C CNN
-F 3 "" H 7750 2350 50  0001 C CNN
-	1    7750 2350
+P 5900 3100
+F 0 "#PWR0107" H 5900 2950 50  0001 C CNN
+F 1 "+BATT1" H 5915 3273 50  0000 C CNN
+F 2 "" H 5900 3100 50  0001 C CNN
+F 3 "" H 5900 3100 50  0001 C CNN
+	1    5900 3100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -106,17 +46,6 @@ F 3 "" H 5900 4050 50  0001 C CNN
 	1    5900 4050
 	1    0    0    -1  
 $EndComp
-$Sheet
-S 6150 3100 1100 500 
-U 6173FDB3
-F0 "Soft Latch Switch 1" 50
-F1 "soft_latch_switch.sch" 50
-F2 "Vin" U L 6150 3200 50 
-F3 "GND" U L 6150 3300 50 
-F4 "Vout" U R 7250 3200 50 
-F5 "Enable" U R 7250 3500 50 
-F6 "Switch-to-GND" U L 6150 3500 50 
-$EndSheet
 $Sheet
 S 6150 4000 1100 500 
 U 61742C5F
@@ -135,9 +64,7 @@ Wire Wire Line
 Wire Wire Line
 	6150 4200 5900 4200
 Wire Wire Line
-	6150 3200 5900 3200
-Wire Wire Line
-	5900 3200 5900 3150
+	5900 3150 5900 3100
 $Comp
 L MCU_Microchip_ATtiny:ATtiny204-SS U1
 U 1 1 617883CC
@@ -152,12 +79,12 @@ $EndComp
 $Comp
 L power:GND #PWR0114
 U 1 1 6179206F
-P 5450 4800
-F 0 "#PWR0114" H 5450 4550 50  0001 C CNN
-F 1 "GND" H 5455 4627 50  0000 C CNN
-F 2 "" H 5450 4800 50  0001 C CNN
-F 3 "" H 5450 4800 50  0001 C CNN
-	1    5450 4800
+P 5000 4800
+F 0 "#PWR0114" H 5000 4550 50  0001 C CNN
+F 1 "GND" H 5005 4627 50  0000 C CNN
+F 2 "" H 5000 4800 50  0001 C CNN
+F 3 "" H 5000 4800 50  0001 C CNN
+	1    5000 4800
 	1    0    0    -1  
 $EndComp
 $Sheet
@@ -183,14 +110,9 @@ $EndSheet
 Wire Wire Line
 	1400 5850 1500 5850
 Wire Wire Line
-	9450 3250 9300 3250
-Wire Wire Line
 	9300 3250 9300 3350
 Wire Wire Line
 	9300 3350 9450 3350
-Wire Wire Line
-	9300 3250 8800 3250
-Connection ~ 9300 3250
 $Sheet
 S 1650 4450 650  500 
 U 61845305
@@ -229,14 +151,14 @@ Wire Wire Line
 	1650 4750 1200 4750
 Wire Wire Line
 	1200 4450 1200 4750
-Text GLabel 8800 3250 0    50   UnSpc ~ 0
+Text GLabel 9000 3250 0    50   UnSpc ~ 0
 1wire_bus
 Text GLabel 1250 5850 0    50   UnSpc ~ 0
 1wire_bus
 Wire Wire Line
 	1400 5850 1250 5850
 Connection ~ 1400 5850
-Text GLabel 5450 4500 2    50   UnSpc ~ 0
+Text GLabel 5000 4500 2    50   UnSpc ~ 0
 1wire_bus
 Text GLabel 1200 4450 1    50   UnSpc ~ 0
 14V
@@ -275,8 +197,6 @@ $EndComp
 Wire Wire Line
 	2500 6850 2500 6700
 Connection ~ 2500 6700
-Text GLabel 7450 3200 2    50   UnSpc ~ 0
-BatteryPower
 Text GLabel 7450 4100 2    50   UnSpc ~ 0
 BatteryPower
 Wire Wire Line
@@ -309,18 +229,16 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0112
 U 1 1 618C781F
-P 5900 3350
-F 0 "#PWR0112" H 5900 3100 50  0001 C CNN
-F 1 "GND" H 5905 3177 50  0000 C CNN
-F 2 "" H 5900 3350 50  0001 C CNN
-F 3 "" H 5900 3350 50  0001 C CNN
-	1    5900 3350
+P 5900 3300
+F 0 "#PWR0112" H 5900 3050 50  0001 C CNN
+F 1 "GND" H 5905 3127 50  0000 C CNN
+F 2 "" H 5900 3300 50  0001 C CNN
+F 3 "" H 5900 3300 50  0001 C CNN
+	1    5900 3300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6150 3300 5900 3300
-Wire Wire Line
-	5900 3300 5900 3350
+	5900 3250 5900 3300
 Text GLabel 1900 1500 0    50   UnSpc ~ 0
 RelayPower
 Text GLabel 1900 2700 0    50   UnSpc ~ 0
@@ -330,24 +248,24 @@ RelayPower
 $Comp
 L Connector_Generic:Conn_01x04 J3
 U 1 1 6178B2FF
-P 5150 4600
-F 0 "J3" H 5068 4175 50  0000 C CNN
-F 1 "Conn_01x04" H 5068 4266 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 5150 4600 50  0001 C CNN
-F 3 "~" H 5150 4600 50  0001 C CNN
-	1    5150 4600
+P 4700 4600
+F 0 "J3" H 4618 4175 50  0000 C CNN
+F 1 "Conn_01x04" H 4618 4266 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 4700 4600 50  0001 C CNN
+F 3 "~" H 4700 4600 50  0001 C CNN
+	1    4700 4600
 	-1   0    0    1   
 $EndComp
-Text GLabel 5450 4600 2    50   UnSpc ~ 0
+Text GLabel 5000 4600 2    50   UnSpc ~ 0
 14V
 Wire Wire Line
-	5350 4700 5450 4700
+	4900 4700 5000 4700
 Wire Wire Line
-	5350 4600 5450 4600
+	4900 4600 5000 4600
 Wire Wire Line
-	5450 4500 5350 4500
+	5000 4500 4900 4500
 Wire Wire Line
-	5450 4700 5450 4800
+	5000 4700 5000 4800
 $Comp
 L power_symbols:+BATT2 #PWR0105
 U 1 1 6163BC2C
@@ -360,15 +278,6 @@ F 3 "" H 1900 2550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6150 3500 5700 3500
-Wire Wire Line
-	5700 3500 5700 4400
-Wire Wire Line
-	5700 4400 6150 4400
-Wire Wire Line
-	5350 4400 5700 4400
-Connection ~ 5700 4400
-Wire Wire Line
 	2400 5850 2400 6550
 Wire Wire Line
 	2250 6000 2500 6000
@@ -376,32 +285,6 @@ Wire Wire Line
 	1300 6000 1500 6000
 Wire Wire Line
 	1400 5850 1400 6550
-$Comp
-L power:GND #PWR0102
-U 1 1 6192AFDF
-P 7600 1800
-F 0 "#PWR0102" H 7600 1550 50  0001 C CNN
-F 1 "GND" H 7605 1627 50  0000 C CNN
-F 2 "" H 7600 1800 50  0001 C CNN
-F 3 "" H 7600 1800 50  0001 C CNN
-	1    7600 1800
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR0104
-U 1 1 6192BB15
-P 7600 2350
-F 0 "#PWR0104" H 7600 2100 50  0001 C CNN
-F 1 "GND" H 7605 2177 50  0000 C CNN
-F 2 "" H 7600 2350 50  0001 C CNN
-F 3 "" H 7600 2350 50  0001 C CNN
-	1    7600 2350
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	7450 2100 9150 2100
-Wire Wire Line
-	8200 2650 7450 2650
 $Sheet
 S 2100 1250 1050 650 
 U 619492C3
@@ -472,42 +355,14 @@ Wire Wire Line
 	3350 2850 3350 3000
 Wire Wire Line
 	3150 2700 3350 2700
-Wire Wire Line
-	4850 5100 4850 1350
-Wire Wire Line
-	3150 1350 4850 1350
 Text GLabel 1450 4450 1    50   UnSpc ~ 0
 BatteryPower
 Wire Wire Line
-	4850 5100 9000 5100
-Wire Wire Line
 	10650 3250 10900 3250
 Wire Wire Line
-	3150 2550 4750 2550
-Wire Wire Line
-	4750 2550 4750 5200
-Wire Wire Line
-	4750 5200 10900 5200
+	3150 2550 4250 2550
 Wire Wire Line
 	10900 3250 10900 5200
-Wire Wire Line
-	9450 3450 9000 3450
-Wire Wire Line
-	9000 3450 9000 5100
-Wire Wire Line
-	10650 3350 10750 3350
-Wire Wire Line
-	9450 3650 7850 3650
-Wire Wire Line
-	7850 3650 7850 3500
-Wire Wire Line
-	9450 3550 9150 3550
-Wire Wire Line
-	9150 3550 9150 2100
-Wire Wire Line
-	9450 3750 8200 3750
-Wire Wire Line
-	8200 3750 8200 2650
 Wire Wire Line
 	9450 3850 8200 3850
 Wire Wire Line
@@ -584,8 +439,102 @@ Wire Wire Line
 Wire Wire Line
 	7250 4400 8200 4400
 Wire Wire Line
-	7250 3200 7450 3200
+	8300 3550 8300 2800
 Wire Wire Line
-	7250 3500 7850 3500
-NoConn ~ 8200 3650
+	8300 3550 9450 3550
+Wire Wire Line
+	8400 1350 8400 3450
+Wire Wire Line
+	3150 1350 8400 1350
+Wire Wire Line
+	8400 3450 9450 3450
+Wire Wire Line
+	9300 3250 9450 3250
+Wire Wire Line
+	9300 3250 9000 3250
+Connection ~ 9300 3250
+$Comp
+L Connector_Generic:Conn_01x03 J1
+U 1 1 616238A4
+P 5500 3150
+F 0 "J1" H 5418 3467 50  0000 C CNN
+F 1 "Conn_01x03" H 5418 3376 50  0000 C CNN
+F 2 "Connector_Wire:SolderWire-2sqmm_1x03_P7.8mm_D2mm_OD3.9mm" H 5500 3150 50  0001 C CNN
+F 3 "~" H 5500 3150 50  0001 C CNN
+	1    5500 3150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J2
+U 1 1 61623D8A
+P 5500 4100
+F 0 "J2" H 5418 4417 50  0000 C CNN
+F 1 "Conn_01x03" H 5418 4326 50  0000 C CNN
+F 2 "Connector_Wire:SolderWire-2sqmm_1x03_P7.8mm_D2mm_OD3.9mm" H 5500 4100 50  0001 C CNN
+F 3 "~" H 5500 4100 50  0001 C CNN
+	1    5500 4100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7250 3150 7450 3150
+Wire Wire Line
+	6150 3250 5900 3250
+Text GLabel 7450 3150 2    50   UnSpc ~ 0
+BatteryPower
+Wire Wire Line
+	6150 3150 5900 3150
+$Sheet
+S 6150 3050 1100 500 
+U 6173FDB3
+F0 "Soft Latch Switch 1" 50
+F1 "soft_latch_switch.sch" 50
+F2 "Vin" U L 6150 3150 50 
+F3 "GND" U L 6150 3250 50 
+F4 "Vout" U R 7250 3150 50 
+F5 "Enable" U R 7250 3450 50 
+F6 "Switch-to-GND" U L 6150 3450 50 
+$EndSheet
+Wire Wire Line
+	7250 3450 8200 3450
+Wire Wire Line
+	8200 3650 9450 3650
+Wire Wire Line
+	5700 4000 5800 4000
+Wire Wire Line
+	5800 4000 5800 3750
+Wire Wire Line
+	5800 3750 9450 3750
+Wire Wire Line
+	5700 4100 5900 4100
+Connection ~ 5900 4100
+Wire Wire Line
+	5900 4200 5700 4200
+Connection ~ 5900 4200
+Wire Wire Line
+	4900 4400 5000 4400
+Wire Wire Line
+	5700 3150 5900 3150
+Connection ~ 5900 3150
+Wire Wire Line
+	5900 3250 5700 3250
+Connection ~ 5900 3250
+Wire Wire Line
+	5700 3050 5800 3050
+Wire Wire Line
+	5800 3050 5800 2800
+Wire Wire Line
+	5800 2800 8300 2800
+Wire Wire Line
+	8200 3450 8200 3650
+Wire Wire Line
+	5000 3450 5000 4400
+Wire Wire Line
+	5000 3450 6150 3450
+Connection ~ 5000 4400
+Wire Wire Line
+	5000 4400 6150 4400
+Wire Wire Line
+	4250 5200 4250 2550
+Wire Wire Line
+	4250 5200 10900 5200
 $EndSCHEMATC

@@ -150,6 +150,9 @@
     (add_net "Net-(J2-Pad3)")
     (add_net "Net-(Q2-Pad1)")
     (add_net "Net-(Q4-Pad1)")
+    (add_net "Net-(U1-Pad6)")
+    (add_net "Net-(U1-Pad7)")
+    (add_net "Net-(U1-Pad9)")
     (add_net RelayPower)
   )
 
@@ -405,7 +408,7 @@
     )
   )
 
-  (module Diode_SMD:D_SOT-23_ANK (layer F.Cu) (tedit 615BA79E) (tstamp 6158FC24)
+  (module Diode_SMD:D_SOT-23_ANK (layer F.Cu) (tedit 615C75C6) (tstamp 6158FC24)
     (at 28 42.5 90)
     (descr "SOT-23, Single Diode")
     (tags SOT-23)
@@ -451,7 +454,7 @@
     )
   )
 
-  (module Diode_SMD:D_SOT-23_ANK (layer F.Cu) (tedit 615BA792) (tstamp 6158FBDD)
+  (module Diode_SMD:D_SOT-23_ANK (layer F.Cu) (tedit 615C75B9) (tstamp 6158FBDD)
     (at 28 32 90)
     (descr "SOT-23, Single Diode")
     (tags SOT-23)
