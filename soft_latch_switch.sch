@@ -50,20 +50,6 @@ GND
 Text HLabel 7050 3400 2    50   UnSpc ~ 0
 Vout
 $Comp
-L Transistor_FET:AO3401A Q1
-U 1 1 61766161
-P 6250 3500
-AR Path="/6173FDB3/61766161" Ref="Q1"  Part="1" 
-AR Path="/61742C5F/61766161" Ref="Q3"  Part="1" 
-AR Path="/615B14D6/61766161" Ref="Q1"  Part="1" 
-F 0 "Q1" V 6592 3500 50  0000 C CNN
-F 1 "SI01P10" V 6501 3500 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 6450 3425 50  0001 L CIN
-F 3 "https://www.mccsemi.com/pdf/Products/SI01P10(SOT-23).pdf" H 6250 3500 50  0001 L CNN
-	1    6250 3500
-	0    1    -1   0   
-$EndComp
-$Comp
 L Device:R_Small_US R?
 U 1 1 6159F419
 P 6250 4400
@@ -234,5 +220,21 @@ F 2 "Resistor_SMD:R_0805_2012Metric" H 6800 4950 50  0001 C CNN
 F 3 "~" H 6800 4950 50  0001 C CNN
 	1    6800 4950
 	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_FET:AO3401A Q1
+U 1 1 61766161
+P 6250 3500
+AR Path="/6173FDB3/61766161" Ref="Q1"  Part="1" 
+AR Path="/61742C5F/61766161" Ref="Q3"  Part="1" 
+AR Path="/615B14D6/61766161" Ref="Q1"  Part="1" 
+F 0 "Q1" V 6592 3500 50  0000 C CNN
+F 1 "P-channel MOSFET, 100V@1A" V 6501 3500 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6450 3425 50  0001 L CIN
+F 3 "https://www.mccsemi.com/pdf/Products/SI01P10(SOT-23).pdf" H 6250 3500 50  0001 L CNN
+F 4 "SI01P10, PMV240SPR" V 6250 3500 50  0001 C CNN "100V Values"
+F 5 "SI2387DS, SI2337DS, SQ2337ES" V 6250 3500 50  0001 C CNN "80V Values"
+	1    6250 3500
+	0    1    -1   0   
 $EndComp
 $EndSCHEMATC
